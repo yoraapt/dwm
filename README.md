@@ -1,0 +1,2 @@
+# dwm
+theme xwallpaper

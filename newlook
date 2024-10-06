@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+WALLPAPER_DIR=/home/yora/pix/wall/
+wall=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" \) | shuf -n 1)
+
+if [ -n "$wall" ]; then
+	wal -i $wall
+	wal -c
+	xwallpaper --zoom $wall
+	xdotool key super+F5
+else
+        echo = " Nenhuma imagem encontrada em $WALLPAPER_DIR"
+
+fi	
+
